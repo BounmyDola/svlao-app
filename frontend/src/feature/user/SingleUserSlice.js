@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { formatDate } from "../../utils/utils";
-import { apiRequest, apiRequestPrivate } from "../../utils/axiosConfig";
+import { apiRequestPrivate } from "../../utils/axiosConfig";
 
 const initialState = {
   singleUser: localStorage.getItem("singleUserInfo")

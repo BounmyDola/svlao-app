@@ -81,7 +81,7 @@ export const getYearOptions = () => {
 
 export const userStatusColor = (userStatus) => {
   let color = "";
-  switch (userStatus.trim()) {
+  switch (userStatus?.trim()) {
     case "pending":
       color = "text-warning";
       break;

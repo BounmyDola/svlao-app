@@ -14,7 +14,7 @@ const opts = {
   overwrite: true,
   invalidate: true,
   resource_type: "auto",
-  folder: "/laostudenthcm/users",
+  folder: "/test/users",
   transformation: { quality: "50" },
 };
 

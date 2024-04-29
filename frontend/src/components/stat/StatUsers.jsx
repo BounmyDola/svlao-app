@@ -7,21 +7,21 @@ const StatUsers = () => {
 
   const totalMale = useMemo(() => {
     const maleUsers = users?.filter(
-      (user) => user.gender.toLowerCase() === "male",
+      (user) => user.gender?.toLowerCase() === "male",
     );
     return maleUsers?.length || 0; // Handle potential undefined users array
   }, [users]);
 
   const totalFemale = useMemo(() => {
     const femaleUsers = users?.filter(
-      (user) => user.gender.toLowerCase() === "female",
+      (user) => user.gender?.toLowerCase() === "female",
     );
     return femaleUsers?.length || 0; // Handle potential undefined users array
   }, [users]);
 
   const totalActive = useMemo(() => {
     const activeUsers = users?.filter(
-      (user) => user.userStatus.toLowerCase() === "active",
+      (user) => user.userStatus?.toLowerCase() === "active",
     );
     return activeUsers?.length || 0;
   }, [users]);

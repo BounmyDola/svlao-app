@@ -33,19 +33,19 @@ const Charts = () => {
 
   const labelsScholarship = scholarshipTypes.map((ele) => ele.name);
   const governmentCount = users?.filter(
-    (user) => user?.scholarship?.scholarshipType.trim() === "ລັດຖະບານ",
+    (user) => user?.scholarship?.scholarshipType?.trim() === "ລັດຖະບານ",
   ).length;
   const coperationalCount = users?.filter(
-    (user) => user?.scholarship?.scholarshipType.trim() === "ຮ່ວມມື",
+    (user) => user?.scholarship?.scholarshipType?.trim() === "ຮ່ວມມື",
   ).length;
   const exchangeCount = users?.filter(
-    (user) => user?.scholarship?.scholarshipType.trim() === "ແລກປ່ຽນ",
+    (user) => user?.scholarship?.scholarshipType?.trim() === "ແລກປ່ຽນ",
   ).length;
   const companyCount = users?.filter(
-    (user) => user?.scholarship?.scholarshipType.trim() === "ບໍລິສັດ",
+    (user) => user?.scholarship?.scholarshipType?.trim() === "ບໍລິສັດ",
   ).length;
   const privateCount = users?.filter(
-    (user) => user?.scholarship?.scholarshipType.trim() === "ສ່ວນໂຕ",
+    (user) => user?.scholarship?.scholarshipType?.trim() === "ສ່ວນໂຕ",
   ).length;
 
   const dataScholarship = {

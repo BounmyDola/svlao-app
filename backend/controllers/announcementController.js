@@ -9,7 +9,7 @@ const opts = {
   overwrite: true,
   invalidate: true,
   resource_type: "auto",
-  folder: "/laostudenthcm/announcement",
+  folder: "/test/announcement",
   transformation: { quality: "50" },
 };
 

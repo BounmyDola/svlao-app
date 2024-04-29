@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { apiRequest } from "../../utils/axiosConfig";
+import { apiRequest, apiRequestPrivate } from "../../utils/axiosConfig";
 
 const initialState = {
   majors: [],
@@ -23,7 +23,11 @@ export const createMajor = createAsyncThunk(
         },
       };
 
-      const { data } = await apiRequest.post("/majors", inputData, config);
+      const { data } = await apiRequestPrivate.post(
+        "/majors",
+        inputData,
+        config,
+      );
       return { data };
     } catch (error) {
       const message =
@@ -47,7 +51,7 @@ export const updateMajor = createAsyncThunk(
         },
       };
 
-      const { data } = await apiRequest.put(
+      const { data } = await apiRequestPrivate.put(
         `/majors/${inputData._id}`,
         {
           ...inputData,
@@ -76,7 +80,7 @@ export const removeMajor = createAsyncThunk(
           "Content-Type": "application/json",
         },
       };
-      const res = await apiRequest.delete(`/majors/${majorId}`, config);
+      const res = await apiRequestPrivate.delete(`/majors/${majorId}`, config);
       const _id = res.data._id;
       return _id;
     } catch (error) {

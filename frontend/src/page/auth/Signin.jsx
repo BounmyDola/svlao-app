@@ -56,7 +56,7 @@ const Signin = () => {
               className="border-b-4 border-b-blue-700 pb-2 text-2xl font-bold text-gray-900"
             >
               {" "}
-              Lao Consulate - HCM.{" "}
+              High School Name.{" "}
             </a>
           </div>
           <div className="my-auto flex flex-col justify-center px-6 pt-8 sm:px-24 md:justify-start md:px-8 md:pt-0 lg:px-12">

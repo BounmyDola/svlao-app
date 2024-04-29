@@ -9,10 +9,12 @@ import {
 } from "../controllers/universityController.js";
 import { verifyJWT, authorizeUserAdmin } from "../middleware/authMiddleware.js";
 import role from "../utils/role.js";
+
 router
   .route("/")
   .post(verifyJWT, authorizeUserAdmin(role.Admin), createUniversity)
   .get(getUniversities);
+
 router
   .route("/:id")
   .delete(verifyJWT, authorizeUserAdmin(role.Admin), deleteUniversity)
